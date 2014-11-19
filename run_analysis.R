@@ -37,4 +37,4 @@ data_sd <- aggregate.data.frame(data_clean[3:length(data_clean)],
 names(data_sd)<- paste0(names(data_sd[3:length(data_sd)]),sep="_", "STD")
 
 processed_data<- cbind(data_mean, data_sd[3:length(data_sd)])
-write.table(processed_data, file="processed_data.txt")
+write.table(processed_data, file="processed_data.txt", row.name=FALSE)
